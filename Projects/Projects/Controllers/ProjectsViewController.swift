@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
 class ProjectsViewController: UIViewController {
+    
+    var context: NSManagedObjectContext?
 
     @IBOutlet weak var dueTodayTableView: UITableView!
     @IBOutlet weak var dueThisWeekTableView: UITableView!
