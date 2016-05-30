@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="14F27" minimumToolsVersion="Xcode 7.0">
-    <elements/>
+    <entity name="Projects" representedClassName=".Projects" syncable="YES">
+        <attribute name="complete" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="dueDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="item" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Projects" positionX="-63" positionY="-18" width="128" height="90"/>
+    </elements>
 </model>

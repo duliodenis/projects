@@ -17,6 +17,9 @@
 		6CBEF9ED1CFCBA4C00064D51 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBEF9EC1CFCBA4C00064D51 /* MainTableViewCell.swift */; };
 		6CBEF9F01CFCBF9700064D51 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBEF9EF1CFCBF9700064D51 /* CoreDataStack.swift */; };
 		6CBEF9F31CFCBFEB00064D51 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6CBEF9F11CFCBFEB00064D51 /* Model.xcdatamodeld */; };
+		6CBEF9F61CFCC2DB00064D51 /* Projects+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBEF9F41CFCC2DB00064D51 /* Projects+CoreDataProperties.swift */; };
+		6CBEF9F71CFCC2DB00064D51 /* Projects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBEF9F51CFCC2DB00064D51 /* Projects.swift */; };
+		6CBEF9F91CFCC35F00064D51 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBEF9F81CFCC35F00064D51 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		6CBEF9EC1CFCBA4C00064D51 /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTableViewCell.swift; path = Controllers/MainTableViewCell.swift; sourceTree = "<group>"; };
 		6CBEF9EF1CFCBF9700064D51 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataStack.swift; path = Model/CoreDataStack.swift; sourceTree = "<group>"; };
 		6CBEF9F21CFCBFEB00064D51 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		6CBEF9F41CFCC2DB00064D51 /* Projects+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Projects+CoreDataProperties.swift"; path = "Model/Projects+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6CBEF9F51CFCC2DB00064D51 /* Projects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Projects.swift; path = Model/Projects.swift; sourceTree = "<group>"; };
+		6CBEF9F81CFCC35F00064D51 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataManager.swift; path = Model/CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,8 +127,11 @@
 		6CBEF9EE1CFCBF2B00064D51 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6CBEF9F81CFCC35F00064D51 /* CoreDataManager.swift */,
 				6CBEF9EF1CFCBF9700064D51 /* CoreDataStack.swift */,
+				6CBEF9F51CFCC2DB00064D51 /* Projects.swift */,
 				6CBEF9F11CFCBFEB00064D51 /* Model.xcdatamodeld */,
+				6CBEF9F41CFCC2DB00064D51 /* Projects+CoreDataProperties.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -200,9 +209,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CBEF9F01CFCBF9700064D51 /* CoreDataStack.swift in Sources */,
+				6CBEF9F61CFCC2DB00064D51 /* Projects+CoreDataProperties.swift in Sources */,
 				6CBEF9E61CFC713900064D51 /* ProjectsViewController.swift in Sources */,
+				6CBEF9F71CFCC2DB00064D51 /* Projects.swift in Sources */,
 				6CBEF9D01CFC692400064D51 /* AppDelegate.swift in Sources */,
 				6CBEF9ED1CFCBA4C00064D51 /* MainTableViewCell.swift in Sources */,
+				6CBEF9F91CFCC35F00064D51 /* CoreDataManager.swift in Sources */,
 				6CBEF9EB1CFCA30A00064D51 /* AddViewController.swift in Sources */,
 				6CBEF9F31CFCBFEB00064D51 /* Model.xcdatamodeld in Sources */,
 			);

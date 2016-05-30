@@ -36,4 +36,15 @@ class ProjectsViewController: UIViewController {
         dueTodayCount.text = "0"
         dueThisWeekCount.text = "0"
     }
+    
+    
+    // MARK: Segue to AddViewController
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "AddViewController" {
+            let nextViewController = segue.destinationViewController as! AddViewController
+            // pass the Managed Context to the AddViewController
+            nextViewController.context = context
+        }
+    }
 }

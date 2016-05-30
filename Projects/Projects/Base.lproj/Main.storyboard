@@ -252,7 +252,7 @@
                     <navigationItem key="navigationItem" title="Projects" id="rfe-jH-s18">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="0H6-ry-pUu">
                             <connections>
-                                <segue destination="gHc-gb-flU" kind="show" id="foo-1W-c0y"/>
+                                <segue destination="gHc-gb-flU" kind="show" identifier="AddViewController" id="foo-1W-c0y"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
