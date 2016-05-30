@@ -31,8 +31,7 @@ class AddViewController: UIViewController {
     // MARK: Save Method
     
     func save() {
-        print("Saving: \(dueDate)")
-        CoreDataManager.saveData(context!, project: project.text!, dueDate: dueDate, complete: false)
+        CoreDataManager.saveData(context!, item: project.text!, dueDate: dueDate, complete: false)
         
         // provide some feedback to user
         project.text = ""

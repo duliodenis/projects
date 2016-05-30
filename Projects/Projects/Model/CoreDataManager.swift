@@ -32,8 +32,17 @@ class CoreDataManager: NSObject {
     }
     
     
-    static func saveData(context: NSManagedObjectContext, project: String, dueDate: NSDate, complete: Bool) {
+    static func saveData(context: NSManagedObjectContext, item: String, dueDate: NSDate, complete: Bool) {
+        let project = NSEntityDescription.insertNewObjectForEntityForName("Projects", inManagedObjectContext: context) as! Projects
+        project.item = item
+        project.dueDate = dueDate
+        project.complete = complete
         
+        do {
+            try context.save()
+        } catch {
+            print("save: Error saving.")
+        }
     }
     
     
