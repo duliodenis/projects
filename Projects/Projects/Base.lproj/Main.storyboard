@@ -13,7 +13,7 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--Projects View Controller-->
+        <!--Projects-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ProjectsViewController" customModule="Projects" customModuleProvider="target" sceneMemberID="viewController">
@@ -25,13 +25,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="aUY-gp-mEU">
-                                <rect key="frame" x="12" y="83" width="240" height="474"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="aUY-gp-mEU">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ekt-qU-HvL">
-                                        <rect key="frame" x="0.0" y="0.0" width="124" height="40"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ekt-qU-HvL">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="40"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="clipboard" translatesAutoresizingMaskIntoConstraints="NO" id="17i-hR-MDw">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clipboard" translatesAutoresizingMaskIntoConstraints="NO" id="17i-hR-MDw">
                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="40" id="0kX-oR-hMB"/>
@@ -39,33 +39,42 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Due Today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKQ-5r-agO">
-                                                <rect key="frame" x="40" y="0.0" width="74" height="40"/>
+                                                <rect key="frame" x="40" y="0.0" width="550" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="FOR-Oc-1Bv"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="PathwayGothicOne-Book" family="Pathway Gothic One" pointSize="24"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJC-jI-CXm">
-                                                <rect key="frame" x="114" y="0.0" width="10" height="40"/>
+                                                <rect key="frame" x="590" y="0.0" width="10" height="40"/>
                                                 <fontDescription key="fontDescription" name="PathwayGothicOne-Book" family="Pathway Gothic One" pointSize="24"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="rxJ-Ee-Mgi"/>
+                                        </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cr6-HN-hCz">
-                                        <rect key="frame" x="0.0" y="40" width="240" height="128"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cr6-HN-hCz">
+                                        <rect key="frame" x="0.0" y="40" width="600" height="128"/>
                                         <subviews>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9tZ-dS-ak4">
-                                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9tZ-dS-ak4">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="128"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </tableView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="KTd-Mm-NWk"/>
+                                        </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rJN-x6-4OL">
-                                        <rect key="frame" x="0.0" y="168" width="240" height="5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rJN-x6-4OL">
+                                        <rect key="frame" x="0.0" y="168" width="600" height="5"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Bn-Lh-uSR">
-                                                <rect key="frame" x="0.0" y="0.0" width="240" height="5"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Bn-Lh-uSR">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="5"/>
                                                 <color key="backgroundColor" red="0.58671800829999998" green="0.68325199660000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="5" id="tMl-iH-k6s"/>
@@ -73,44 +82,56 @@
                                             </view>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="pTF-9e-EwC">
-                                        <rect key="frame" x="0.0" y="173" width="136" height="40"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="pTF-9e-EwC">
+                                        <rect key="frame" x="0.0" y="173" width="600" height="40"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="calendar" translatesAutoresizingMaskIntoConstraints="NO" id="ecE-pE-X4g">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" translatesAutoresizingMaskIntoConstraints="NO" id="ecE-pE-X4g">
                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="PNw-Z9-W54"/>
                                                     <constraint firstAttribute="width" constant="40" id="ZUE-8a-BNE"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Next 5 Days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWk-NL-GAJ">
-                                                <rect key="frame" x="40" y="0.0" width="86" height="28"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="This Week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWk-NL-GAJ">
+                                                <rect key="frame" x="40" y="0.0" width="550" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="LrK-fL-bdq"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="PathwayGothicOne-Book" family="Pathway Gothic One" pointSize="24"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ok3-hI-dOf">
-                                                <rect key="frame" x="126" y="0.0" width="10" height="28"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ok3-hI-dOf">
+                                                <rect key="frame" x="590" y="0.0" width="10" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="ePQ-th-NRa"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="PathwayGothicOne-Book" family="Pathway Gothic One" pointSize="24"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="fwg-DK-EuA"/>
+                                        </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nzb-8a-yiH">
-                                        <rect key="frame" x="0.0" y="213" width="240" height="128"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nzb-8a-yiH">
+                                        <rect key="frame" x="0.0" y="213" width="600" height="128"/>
                                         <subviews>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bKM-I0-ZZ0">
-                                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bKM-I0-ZZ0">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="128"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </tableView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="xWX-rj-Zx6"/>
+                                        </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ayb-R8-ko5">
-                                        <rect key="frame" x="0.0" y="341" width="240" height="5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ayb-R8-ko5">
+                                        <rect key="frame" x="0.0" y="341" width="600" height="5"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="08S-b2-K4U">
-                                                <rect key="frame" x="0.0" y="0.0" width="240" height="5"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="08S-b2-K4U">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="5"/>
                                                 <color key="backgroundColor" red="0.58671800829999998" green="0.68325199660000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="5" id="g0w-oK-9sZ"/>
@@ -118,21 +139,43 @@
                                             </view>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UiL-iZ-IRm">
-                                        <rect key="frame" x="0.0" y="346" width="240" height="128"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UiL-iZ-IRm">
+                                        <rect key="frame" x="0.0" y="346" width="600" height="190"/>
                                         <subviews>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hTK-w3-VvN">
-                                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hTK-w3-VvN">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="190"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </tableView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Nzb-8a-yiH" secondAttribute="trailing" id="48X-07-lVS"/>
+                                    <constraint firstItem="pTF-9e-EwC" firstAttribute="leading" secondItem="aUY-gp-mEU" secondAttribute="leading" id="7tu-7q-sTl"/>
+                                    <constraint firstAttribute="trailing" secondItem="pTF-9e-EwC" secondAttribute="trailing" id="HxO-aq-bLd"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ayb-R8-ko5" secondAttribute="trailing" id="IJv-dg-UPD"/>
+                                    <constraint firstItem="Cr6-HN-hCz" firstAttribute="leading" secondItem="aUY-gp-mEU" secondAttribute="leading" id="IPP-Rp-yjp"/>
+                                    <constraint firstAttribute="trailing" secondItem="Cr6-HN-hCz" secondAttribute="trailing" id="LiR-XR-jEd"/>
+                                    <constraint firstAttribute="trailing" secondItem="UiL-iZ-IRm" secondAttribute="trailing" id="MTd-Yw-mha"/>
+                                    <constraint firstItem="Ayb-R8-ko5" firstAttribute="leading" secondItem="aUY-gp-mEU" secondAttribute="leading" id="UOz-1z-8BH"/>
+                                    <constraint firstAttribute="trailing" secondItem="rJN-x6-4OL" secondAttribute="trailing" id="Vnd-20-ku7"/>
+                                    <constraint firstItem="rJN-x6-4OL" firstAttribute="leading" secondItem="aUY-gp-mEU" secondAttribute="leading" id="Vs9-od-D7O"/>
+                                    <constraint firstItem="Ekt-qU-HvL" firstAttribute="leading" secondItem="aUY-gp-mEU" secondAttribute="leading" id="dF6-zW-hoS"/>
+                                    <constraint firstItem="Nzb-8a-yiH" firstAttribute="leading" secondItem="aUY-gp-mEU" secondAttribute="leading" id="eSU-vQ-CkK"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ekt-qU-HvL" secondAttribute="trailing" id="fdP-H1-Ze1"/>
+                                    <constraint firstItem="UiL-iZ-IRm" firstAttribute="leading" secondItem="aUY-gp-mEU" secondAttribute="leading" id="gMZ-3N-RgO"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aUY-gp-mEU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0bJ-aT-FAZ"/>
+                            <constraint firstItem="aUY-gp-mEU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="3op-EA-b6i"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aUY-gp-mEU" secondAttribute="bottom" id="92e-vh-SYn"/>
+                            <constraint firstAttribute="trailing" secondItem="aUY-gp-mEU" secondAttribute="trailing" id="Nlb-no-EiG"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="rfe-jH-s18"/>
+                    <navigationItem key="navigationItem" title="Projects" id="rfe-jH-s18"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
