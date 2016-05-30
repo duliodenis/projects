@@ -3,9 +3,11 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="PathwayGothicOne-Regular.ttf">
+            <string>PathwayGothicOne-Book</string>
             <string>PathwayGothicOne-Book</string>
             <string>PathwayGothicOne-Book</string>
             <string>PathwayGothicOne-Book</string>
@@ -218,6 +220,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="dueThisWeekCount" destination="ok3-hI-dOf" id="hlu-kA-jQp"/>
+                        <outlet property="dueThisWeekTableView" destination="bKM-I0-ZZ0" id="aPb-yK-7fQ"/>
+                        <outlet property="dueTodayCount" destination="FJC-jI-CXm" id="hIE-YW-com"/>
+                        <outlet property="dueTodayTableView" destination="9tZ-dS-ak4" id="CTv-ox-tgB"/>
+                        <outlet property="mainTableView" destination="hTK-w3-VvN" id="bFQ-nf-34X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -234,8 +243,39 @@
                     <view key="view" contentMode="scaleToFill" id="Pau-HS-Bmy">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What do you need to get done" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DSc-eB-qvr">
+                                <rect key="frame" x="20" y="72" width="560" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ZeM-Pm-Dmm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PathwayGothicOne-Book" family="Pathway Gothic One" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="ErA-7a-ITJ">
+                                <rect key="frame" x="0.0" y="134" width="600" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="486321190.60321403">
+                                    <!--2016-05-30 17:13:10 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="datePickerUpdated:" destination="gHc-gb-flU" eventType="valueChanged" id="wHY-QB-wM2"/>
+                                </connections>
+                            </datePicker>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ErA-7a-ITJ" secondAttribute="trailing" id="8ys-SB-PB1"/>
+                            <constraint firstItem="ErA-7a-ITJ" firstAttribute="leading" secondItem="Pau-HS-Bmy" secondAttribute="leading" id="Aif-VA-LuE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DSc-eB-qvr" secondAttribute="trailing" id="F7p-zp-mOB"/>
+                            <constraint firstItem="DSc-eB-qvr" firstAttribute="leading" secondItem="Pau-HS-Bmy" secondAttribute="leadingMargin" id="GV0-aP-FqQ"/>
+                            <constraint firstItem="ErA-7a-ITJ" firstAttribute="top" secondItem="DSc-eB-qvr" secondAttribute="bottom" constant="22" id="L7z-Ps-75T"/>
+                            <constraint firstItem="DSc-eB-qvr" firstAttribute="top" secondItem="HKP-Lj-KBw" secondAttribute="bottom" constant="8" id="Q6w-aP-Vjg"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dueDatePicker" destination="ErA-7a-ITJ" id="Yxb-ux-9mn"/>
+                        <outlet property="project" destination="DSc-eB-qvr" id="yE3-ac-6yF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hHg-ps-hhD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

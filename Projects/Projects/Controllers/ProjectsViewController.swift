@@ -10,6 +10,12 @@ import UIKit
 
 class ProjectsViewController: UIViewController {
 
+    @IBOutlet weak var dueTodayTableView: UITableView!
+    @IBOutlet weak var dueThisWeekTableView: UITableView!
+    @IBOutlet weak var mainTableView: UITableView!
+    @IBOutlet weak var dueTodayCount: UILabel!
+    @IBOutlet weak var dueThisWeekCount: UILabel!
+    
     
     // MARK: View Lifecycle
     
@@ -24,5 +30,7 @@ class ProjectsViewController: UIViewController {
         // apply a tint color to the nav bar to color the bar button items
         navigationController?.navigationBar.tintColor = UIColor(red: 236/255, green: 240/255, blue: 241/255, alpha: 1.0)
         
+        dueTodayCount.text = "0"
+        dueThisWeekCount.text = "0"
     }
 }
