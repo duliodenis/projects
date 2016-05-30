@@ -1,7 +1,7 @@
 # Projects
 An iOS 9 / Swift 2 Project Management companion app to help you manage multiple projects.
 
-![](art/screenshot/Projects07.gif?raw=true)
+![](art/screenshot/Projects08.gif?raw=true)
 
 ## Contributing
 See [CONTRIBUTING](CONTRIBUTING.md).

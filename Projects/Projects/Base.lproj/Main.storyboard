@@ -122,7 +122,7 @@
                                                     <constraint firstAttribute="width" constant="40" id="ZUE-8a-BNE"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="This Week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWk-NL-GAJ">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text=" This Week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWk-NL-GAJ">
                                                 <rect key="frame" x="60" y="0.0" width="510" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="LrK-fL-bdq"/>

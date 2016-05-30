@@ -47,7 +47,24 @@ class CoreDataManager: NSObject {
     
     
     static func update(context: NSManagedObjectContext, project: Projects) {
+        // fetch and update
+        do {
+            let request = NSFetchRequest(entityName: "Projects")
+            request.predicate = NSPredicate(format: "item=%@ and dueDate=%@", project.item!, project.dueDate!)
+            
+            let results = try context.executeFetchRequest(request)
+            let resultSet = results as! [Projects]
+            resultSet[0].complete = project.complete
+        } catch {
+            print("update: Error fetching.")
+        }
         
+        // then save
+        do {
+            try context.save()
+        } catch {
+            print("update: Error saving context.")
+        }
     }
     
 }

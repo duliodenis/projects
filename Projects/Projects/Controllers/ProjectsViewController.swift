@@ -58,6 +58,15 @@ class ProjectsViewController: UIViewController {
     }
     
     
+    // MARK: Date Formatter Helper Method
+    
+    func formatDate(date: NSDate) -> String {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "MMM dd"
+        return dateFormatter.stringFromDate(date)
+    }
+    
+    
     // MARK: Refresh UI Method
     
     func refreshUI() {
@@ -93,9 +102,19 @@ class ProjectsViewController: UIViewController {
 extension ProjectsViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+        if tableView.isEqual(mainTableView) {
+            let project = projects[indexPath.row] 
+            let cell = tableView.cellForRowAtIndexPath(indexPath) as! MainTableViewCell
+            if (project.complete == false) {
+                cell.imageView?.image = UIImage(named: "checkmark")
+                project.complete = true
+            } else {
+                cell.imageView?.image = UIImage(named: "uncheckmark")
+                project.complete = false
+            }
+            CoreDataManager.update(context!, project: project)
+        }
     }
-
 }
 
 extension ProjectsViewController: UITableViewDataSource {
@@ -123,14 +142,14 @@ extension ProjectsViewController: UITableViewDataSource {
         if tableView == dueTodayTableView {
             let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
             let dueToday = itemsDueToday[indexPath.row]
-            cell.textLabel?.text = "\(dueToday.item!), \(dueToday.dueDate!)"
+            cell.textLabel?.text = dueToday.item! //+ " " + formatDate(dueToday.dueDate!)
             return cell
         }
             
         else if tableView == dueThisWeekTableView {
             let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
             let dueThisWeek = itemsDueThisWeek[indexPath.row]
-            cell.textLabel?.text = "\(dueThisWeek.item!), \(dueThisWeek.dueDate!)"
+            cell.textLabel?.text = dueThisWeek.item! + " (" + formatDate(dueThisWeek.dueDate!) + ")"
             return cell
         }
         else {
@@ -143,7 +162,7 @@ extension ProjectsViewController: UITableViewDataSource {
                 cell.imageView?.image = UIImage(named: "uncheckmark")
             }
             
-            cell.textLabel?.text = "\(mainProjects.item!), \(mainProjects.dueDate!)"
+            cell.textLabel?.text = mainProjects.item! + " (" + formatDate(mainProjects.dueDate!) + ")"
             return cell
         }
     }
