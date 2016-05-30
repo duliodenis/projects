@@ -1,5 +1,5 @@
 //
-//  AppDelegate.swift
+//  ProjectsViewController.swift
 //  Projects
 //
 //  Created by Dulio Denis on 5/30/16.
@@ -8,10 +8,6 @@
 
 import UIKit
 
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-    var window: UIWindow?
+class ProjectsViewController: UIViewController {
 
 }
-

@@ -43,5 +43,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>&quot;PathwayGothicOne-Regular.ttf&quot;</string>
+	</array>
 </dict>
 </plist>
