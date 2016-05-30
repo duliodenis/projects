@@ -12,6 +12,7 @@
             <string>PathwayGothicOne-Book</string>
             <string>PathwayGothicOne-Book</string>
             <string>PathwayGothicOne-Book</string>
+            <string>PathwayGothicOne-Book</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -81,7 +82,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cr6-HN-hCz">
                                         <rect key="frame" x="0.0" y="42" width="600" height="128"/>
                                         <subviews>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9tZ-dS-ak4">
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9tZ-dS-ak4">
                                                 <rect key="frame" x="0.0" y="0.0" width="600" height="128"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </tableView>
@@ -156,7 +157,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nzb-8a-yiH">
                                         <rect key="frame" x="0.0" y="221" width="600" height="128"/>
                                         <subviews>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bKM-I0-ZZ0">
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bKM-I0-ZZ0">
                                                 <rect key="frame" x="0.0" y="0.0" width="600" height="128"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </tableView>
@@ -180,9 +181,44 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UiL-iZ-IRm">
                                         <rect key="frame" x="0.0" y="358" width="600" height="178"/>
                                         <subviews>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hTK-w3-VvN">
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hTK-w3-VvN">
                                                 <rect key="frame" x="0.0" y="0.0" width="600" height="178"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellIdentifier" id="bXn-yx-0hO" customClass="MainTableViewCell" customModule="Projects" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bXn-yx-0hO" id="HNk-Ac-veh">
+                                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark" translatesAutoresizingMaskIntoConstraints="NO" id="PoN-Hm-XdF">
+                                                                    <rect key="frame" x="8" y="0.0" width="35" height="35"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="35" id="Olh-CU-82x"/>
+                                                                        <constraint firstAttribute="width" constant="35" id="ucP-ia-ydc"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thing to get done" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sCb-Dm-FNJ">
+                                                                    <rect key="frame" x="51" y="0.0" width="541" height="35"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="35" id="vLp-z9-qYS"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="PathwayGothicOne-Book" family="Pathway Gothic One" pointSize="22"/>
+                                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="PoN-Hm-XdF" firstAttribute="top" secondItem="sCb-Dm-FNJ" secondAttribute="top" id="NNm-vy-uDX"/>
+                                                                <constraint firstItem="PoN-Hm-XdF" firstAttribute="top" secondItem="HNk-Ac-veh" secondAttribute="top" id="eSU-Ol-LBv"/>
+                                                                <constraint firstItem="sCb-Dm-FNJ" firstAttribute="trailing" secondItem="HNk-Ac-veh" secondAttribute="trailingMargin" id="k7u-IJ-Sm5"/>
+                                                                <constraint firstItem="PoN-Hm-XdF" firstAttribute="leading" secondItem="HNk-Ac-veh" secondAttribute="leadingMargin" id="qmt-pq-S6Q"/>
+                                                                <constraint firstItem="sCb-Dm-FNJ" firstAttribute="leading" secondItem="PoN-Hm-XdF" secondAttribute="trailing" constant="8" id="rqj-R3-7fJ"/>
+                                                            </constraints>
+                                                        </tableViewCellContentView>
+                                                    </tableViewCell>
+                                                </prototypes>
                                             </tableView>
                                         </subviews>
                                     </stackView>
@@ -302,6 +338,7 @@
     </scenes>
     <resources>
         <image name="calendar" width="630" height="630"/>
+        <image name="checkmark" width="534" height="534"/>
         <image name="clipboard" width="600" height="600"/>
     </resources>
 </document>
