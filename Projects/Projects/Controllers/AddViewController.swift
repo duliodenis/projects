@@ -24,8 +24,9 @@ class AddViewController: UIViewController {
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .Plain, target: self, action: #selector(AddViewController.save))
         
+        // make keyboard open when view loads
         project.delegate = self
-        
+        project.becomeFirstResponder()
     }
     
     // MARK: Save Method
