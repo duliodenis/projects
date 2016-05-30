@@ -27,6 +27,9 @@ xcuserdata
 *.hmap
 *.ipa
 
+## Mac Specific
+.DS_Store
+
 ## Playgrounds
 timeline.xctimeline
 playground.xcworkspace
