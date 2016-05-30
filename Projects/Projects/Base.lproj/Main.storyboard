@@ -25,7 +25,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="aUY-gp-mEU">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="aUY-gp-mEU">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ekt-qU-HvL">
@@ -40,7 +40,7 @@
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clipboard" translatesAutoresizingMaskIntoConstraints="NO" id="17i-hR-MDw">
+                                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clipboard" translatesAutoresizingMaskIntoConstraints="NO" id="17i-hR-MDw">
                                                 <rect key="frame" x="20" y="0.0" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="40" id="0kX-oR-hMB"/>
@@ -53,13 +53,13 @@
                                                     <constraint firstAttribute="height" constant="40" id="FOR-Oc-1Bv"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="PathwayGothicOne-Book" family="Pathway Gothic One" pointSize="24"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJC-jI-CXm">
                                                 <rect key="frame" x="570" y="0.0" width="10" height="40"/>
                                                 <fontDescription key="fontDescription" name="PathwayGothicOne-Book" family="Pathway Gothic One" pointSize="24"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LuN-r3-Z3Y">
@@ -77,7 +77,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cr6-HN-hCz">
-                                        <rect key="frame" x="0.0" y="40" width="600" height="128"/>
+                                        <rect key="frame" x="0.0" y="42" width="600" height="128"/>
                                         <subviews>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9tZ-dS-ak4">
                                                 <rect key="frame" x="0.0" y="0.0" width="600" height="128"/>
@@ -89,7 +89,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rJN-x6-4OL">
-                                        <rect key="frame" x="0.0" y="168" width="600" height="5"/>
+                                        <rect key="frame" x="0.0" y="172" width="600" height="5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Bn-Lh-uSR">
                                                 <rect key="frame" x="0.0" y="0.0" width="600" height="5"/>
@@ -101,7 +101,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="pTF-9e-EwC">
-                                        <rect key="frame" x="0.0" y="173" width="600" height="40"/>
+                                        <rect key="frame" x="0.0" y="179" width="600" height="40"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6BX-JW-NxH">
                                                 <rect key="frame" x="0.0" y="0.0" width="20" height="40"/>
@@ -112,7 +112,7 @@
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" translatesAutoresizingMaskIntoConstraints="NO" id="ecE-pE-X4g">
+                                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" translatesAutoresizingMaskIntoConstraints="NO" id="ecE-pE-X4g">
                                                 <rect key="frame" x="20" y="0.0" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="PNw-Z9-W54"/>
@@ -125,7 +125,7 @@
                                                     <constraint firstAttribute="height" constant="40" id="LrK-fL-bdq"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="PathwayGothicOne-Book" family="Pathway Gothic One" pointSize="24"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ok3-hI-dOf">
@@ -134,7 +134,7 @@
                                                     <constraint firstAttribute="height" constant="40" id="ePQ-th-NRa"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="PathwayGothicOne-Book" family="Pathway Gothic One" pointSize="24"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGd-nG-9qE">
@@ -152,7 +152,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nzb-8a-yiH">
-                                        <rect key="frame" x="0.0" y="213" width="600" height="128"/>
+                                        <rect key="frame" x="0.0" y="221" width="600" height="128"/>
                                         <subviews>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bKM-I0-ZZ0">
                                                 <rect key="frame" x="0.0" y="0.0" width="600" height="128"/>
@@ -164,7 +164,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ayb-R8-ko5">
-                                        <rect key="frame" x="0.0" y="341" width="600" height="5"/>
+                                        <rect key="frame" x="0.0" y="351" width="600" height="5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="08S-b2-K4U">
                                                 <rect key="frame" x="0.0" y="0.0" width="600" height="5"/>
@@ -176,10 +176,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UiL-iZ-IRm">
-                                        <rect key="frame" x="0.0" y="346" width="600" height="190"/>
+                                        <rect key="frame" x="0.0" y="358" width="600" height="178"/>
                                         <subviews>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hTK-w3-VvN">
-                                                <rect key="frame" x="0.0" y="0.0" width="600" height="190"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="178"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </tableView>
                                         </subviews>
@@ -211,11 +211,35 @@
                             <constraint firstAttribute="trailing" secondItem="aUY-gp-mEU" secondAttribute="trailing" id="Nlb-no-EiG"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Projects" id="rfe-jH-s18"/>
+                    <navigationItem key="navigationItem" title="Projects" id="rfe-jH-s18">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="0H6-ry-pUu">
+                            <connections>
+                                <segue destination="gHc-gb-flU" kind="show" id="foo-1W-c0y"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1252" y="387"/>
+        </scene>
+        <!--Add-->
+        <scene sceneID="yTy-uj-d1S">
+            <objects>
+                <viewController title="Add" id="gHc-gb-flU" customClass="AddViewController" customModule="Projects" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HKP-Lj-KBw"/>
+                        <viewControllerLayoutGuide type="bottom" id="IAk-Da-yho"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Pau-HS-Bmy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hHg-ps-hhD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1948" y="387"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OzX-0n-j4D">

@@ -13,6 +13,7 @@
 		6CBEF9DA1CFC692400064D51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CBEF9D81CFC692400064D51 /* LaunchScreen.storyboard */; };
 		6CBEF9E61CFC713900064D51 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBEF9E51CFC713900064D51 /* ProjectsViewController.swift */; };
 		6CBEF9E91CFC718D00064D51 /* PathwayGothicOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CBEF9E81CFC718D00064D51 /* PathwayGothicOne-Regular.ttf */; };
+		6CBEF9EB1CFCA30A00064D51 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBEF9EA1CFCA30A00064D51 /* AddViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		6CBEF9DB1CFC692400064D51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6CBEF9E51CFC713900064D51 /* ProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectsViewController.swift; path = Controllers/ProjectsViewController.swift; sourceTree = "<group>"; };
 		6CBEF9E81CFC718D00064D51 /* PathwayGothicOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PathwayGothicOne-Regular.ttf"; path = "Fonts/PathwayGothicOne-Regular.ttf"; sourceTree = "<group>"; };
+		6CBEF9EA1CFCA30A00064D51 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddViewController.swift; path = Controllers/AddViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				6CBEF9E51CFC713900064D51 /* ProjectsViewController.swift */,
+				6CBEF9EA1CFCA30A00064D51 /* AddViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			files = (
 				6CBEF9E61CFC713900064D51 /* ProjectsViewController.swift in Sources */,
 				6CBEF9D01CFC692400064D51 /* AppDelegate.swift in Sources */,
+				6CBEF9EB1CFCA30A00064D51 /* AddViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
