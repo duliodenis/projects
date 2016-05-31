@@ -16,6 +16,7 @@ class AddViewController: UIViewController {
     @IBOutlet weak var project: UITextField!
     @IBOutlet weak var dueDatePicker: UIDatePicker!
     var dueDate = NSDate()
+    var projectAddedBanner = UILabel()
     
     // MARK: View Lifecycle
     
@@ -27,6 +28,8 @@ class AddViewController: UIViewController {
         // make keyboard open when view loads
         project.delegate = self
         project.becomeFirstResponder()
+        
+        addBanner()
     }
     
     // MARK: Save Method
@@ -35,6 +38,7 @@ class AddViewController: UIViewController {
         CoreDataManager.saveData(context!, item: project.text!, dueDate: dueDate, complete: false)
         
         // provide some feedback to user
+        presentBanner()
         project.text = ""
         UIView.transitionWithView(project, duration: 0.2, options: .CurveEaseIn, animations: {
             self.project.layer.backgroundColor = UIColor(red: 46/255, green: 204/255, blue: 113/255, alpha: 1.0).CGColor
@@ -47,6 +51,34 @@ class AddViewController: UIViewController {
     @IBAction func datePickerUpdated(sender: AnyObject) {
         // update our dueDate
         dueDate = dueDatePicker.date
+    }
+    
+    private func addBanner() {
+        projectAddedBanner = UILabel(frame: CGRectMake(0, self.navigationController!.navigationBar.frame.maxY, self.view.frame.width, 0))
+        projectAddedBanner.backgroundColor = UIColor(red: 46/255, green: 204/255, blue: 113/255, alpha: 1.0)
+        projectAddedBanner.textAlignment = .Center
+        projectAddedBanner.font = UIFont(name: "PathwayGothicOne-Book", size: 23)
+        projectAddedBanner.textColor = UIColor.whiteColor()
+        projectAddedBanner.text = "You just added a project. Add another one!"
+        view.addSubview(projectAddedBanner)
+    }
+    
+    private func presentBanner() {
+        //set up the banner
+        let hiddenBannerFrame = CGRectMake(0, self.navigationController!.navigationBar.frame.maxY, self.view.frame.width, 0)
+        let shownBannerFrame = CGRectMake(0, self.navigationController!.navigationBar.frame.maxY, self.view.frame.width, project.frame.size.height + 20)
+        
+        // drop it in and pull it out
+        if project.text != "" {
+            UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 1.5, initialSpringVelocity: 1.5, options: .CurveEaseInOut, animations: {
+                self.projectAddedBanner.frame = shownBannerFrame
+            }) { (Bool) in
+                UIView.animateWithDuration(0.2, delay: 2, usingSpringWithDamping: 1.5, initialSpringVelocity: 1.5, options: .CurveEaseInOut, animations: {
+                    self.projectAddedBanner.frame = hiddenBannerFrame
+                    }, completion: { (Bool) in
+                })
+            }
+        }
     }
 }
 
