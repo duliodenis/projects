@@ -40,10 +40,9 @@ class AddViewController: UIViewController {
     // MARK: Save Method
     
     func save() {
-        CoreDataManager.saveData(context!, item: project.text!, dueDate: dueDate, complete: false)
-        
         // provide some feedback to user
         if project.text != "" {
+            CoreDataManager.saveData(context!, item: project.text!, dueDate: dueDate, complete: false)
             dropProjectAddedBanner()
             project.text = ""
             
@@ -62,14 +61,17 @@ class AddViewController: UIViewController {
     
     private func setUpAnimatorAndBehaviors() {
         animator = UIDynamicAnimator(referenceView: view)
-        gravity = UIGravityBehavior(items: [projectAddedBanner])
+        gravity = UIGravityBehavior()
         collision = UICollisionBehavior(items: [projectAddedBanner])
         let barrierFrame = CGRectMake(0, navigationController!.navigationBar.frame.maxY + 64, view.frame.size.width, 1)
         collision.addBoundaryWithIdentifier("barrier", forPath: UIBezierPath(rect: barrierFrame))
+        
+        animator.addBehavior(gravity)
+        animator.addBehavior(collision)
     }
     
     private func configureProjectAddedBanner() {
-        projectAddedBanner = UILabel(frame: CGRectMake(0, -64, self.view.frame.width, 64))
+        projectAddedBanner = UILabel(frame: CGRectMake(0, 0, self.view.frame.width, 64))
         projectAddedBanner.backgroundColor = UIColor(red: 46/255, green: 204/255, blue: 113/255, alpha: 1.0)
         projectAddedBanner.textAlignment = .Center
         projectAddedBanner.font = UIFont(name: "PathwayGothicOne-Book", size: 23)
@@ -79,13 +81,13 @@ class AddViewController: UIViewController {
     }
     
     private func dropProjectAddedBanner() {
-        animator.addBehavior(gravity)
-        animator.addBehavior(collision)
+        setUpAnimatorAndBehaviors()
+        gravity.addItem(projectAddedBanner)
     }
     
     private func raiseProjectAddedBanner() {
         UIView.animateWithDuration(0.7, delay: 0, usingSpringWithDamping: 1.5, initialSpringVelocity: 1.5, options: .CurveEaseOut, animations: {
-            self.projectAddedBanner.frame = CGRect(x: 0, y: -64, width: self.view.frame.width, height: 64)
+            self.projectAddedBanner.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 64)
             }) { (Bool) in
         }
     }
